@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marc Dexter P. Vargas — Developer & Designer</title>
+  <meta name="description" content="Marc Dexter P. Vargas — BS Computer Science student, Full-Stack Developer, UI/UX Designer & Power BI Analyst from Lucena City, Philippines." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       PAGE LOADER
+       ═══════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-name">Marc Dexter Vargas</div>
+  </div>
+
+  <!-- Scroll progress bar -->
+  <div id="scrollBar"></div>
+
+  <!-- Cursor glow (desktop only) -->
+  <div id="glow"></div>
+
+  <!-- Back to top button -->
+  <button id="backTop" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast notification -->
+  <div id="toast"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       IMAGE MODAL
+       ═══════════════════════════════════════ -->
+  <div id="modal" role="dialog" aria-modal="true">
+    <div class="modal-wrap">
+      <button class="modal-close-btn" onclick="closeModal()" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-box">
+        <div class="modal-img-wrap">
+          <img id="modalImg" src="" alt="Preview" />
+        </div>
+        <div class="modal-body">
+          <div class="modal-title" id="modalTitle"></div>
+          <div class="modal-desc"  id="modalDesc"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       MOBILE MENU
+       ═══════════════════════════════════════ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMobileMenu()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#design">Design & 3D</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════ -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a class="nav-logo" href="#">
+        <img src="images/avatar.jpg" alt="Marc Dexter Vargas" />
+        <div>
+          <div class="nav-logo-text">Marc Dexter Vargas</div>
+          <div class="nav-logo-sub">Developer · Designer · Analyst</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeBtn" title="Toggle theme">🌙</button>
+        <a class="btn-hire" href="#contact">Hire Me</a>
+        <button class="hamburger" onclick="openMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════ -->
+  <div class="wrap">
+    <div class="hero-section">
+      <div style="width:100%">
+        <div class="hero-grid">
+
+          <!-- Left: Text Content -->
+          <div>
+            <div class="hero-eyebrow fade-up">
+              <span class="dot"></span>
+              Open for OJT &amp; Opportunities
+            </div>
+
+            <h1 class="hero-title fade-up" style="transition-delay: 0.1s">
+              Building the web,<br />
+              one <span class="grad-text">pixel</span> at a time.
+            </h1>
+
+            <p class="hero-desc fade-up" style="transition-delay: 0.2s">
+              I'm <strong>Marc Dexter P. Vargas</strong> — a passionate 3rd-year BS Computer
+              Science student from Lucena City, Philippines. I design and develop functional,
+              visually appealing digital experiences across web, design, and data analytics.
+            </p>
+
+            <div class="hero-cta fade-up" style="transition-delay: 0.3s">
+              <a class="btn-primary" href="#projects">
+                <i class="fa-solid fa-code"></i> View My Work
+              </a>
+              <a class="btn-outline" href="images/VARGAS_MARC_DEXTER_RESUME.pdf" download>
+                <i class="fa-solid fa-download"></i> Download CV
+              </a>
+            </div>
+
+            <div class="hero-stats fade-up" style="transition-delay: 0.4s">
+              <div>
+                <div class="stat-val">3+</div>
+                <div class="stat-label">Years Studying</div>
+              </div>
+              <div>
+                <div class="stat-val">5+</div>
+                <div class="stat-label">Projects Built</div>
+              </div>
+              <div>
+                <div class="stat-val">2</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Profile Photo Card -->
+          <div class="hero-photo-wrap fade-up" style="transition-delay: 0.2s">
+            <div class="hero-deco-blur top-right"></div>
+            <div class="hero-deco-blur bottom-left"></div>
+            <div class="hero-photo-card">
+              <img src="images/profile.jpeg" alt="Marc Dexter P. Vargas" />
+              <div class="hero-photo-overlay">
+                <div class="hero-available">
+                  <span class="live-dot"></span> Available for OJT
+                </div>
+                <div class="hero-name-card">Marc Dexter P. Vargas</div>
+                <div class="hero-role-card">Sacred Heart College · Lucena City</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       ABOUT SECTION
+       ═══════════════════════════════════════ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title fade-up">Driven by code &amp; creativity</h2>
+
+      <div class="about-grid fade-up">
+
+        <!-- Left: Bio + Skills -->
+        <div class="about-text">
+          <p>
+            I'm a <strong>3rd-year BS Computer Science student</strong> at Sacred Heart College
+            with a strong passion for building functional and visually polished digital solutions.
+            My expertise spans front-end, back-end, and data analytics.
+          </p>
+          <p>
+            Beyond coding, I have hands-on experience in <strong>graphic design</strong> using
+            Canva and Adobe Photoshop — crafting magazines, posters, and brand materials. I also
+            work in <strong>3D modeling with Blender 4.4</strong> and <strong>data visualization
+            with Power BI</strong>.
+          </p>
+          <p>
+            As a <strong>Marillac Grantee and working student</strong> at SHC, I balance academics
+            with daily responsibilities — building strong time management and a disciplined work
+            ethic that I bring to every project.
+          </p>
+
+          <!-- Technical Skills -->
+          <div class="skills-block">
+            <div class="skills-block-title">Frontend & Design</div>
+            <div class="chip-row">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">UI/UX Design</span>
+              <span class="chip">Adobe Photoshop</span>
+              <span class="chip">Canva</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-title">Backend & Database</div>
+            <div class="chip-row">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">PHP</span>
+              <span class="chip">Python</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">SQLite</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-title">Data & Tools</div>
+            <div class="chip-row">
+              <span class="chip">Power BI</span>
+              <span class="chip">Blender 3D</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Specialty Cards -->
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon" style="background:rgba(110,231,183,0.1); color:var(--accent)">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="about-card-title">Full-Stack Web Development</div>
+            <div class="about-card-desc">
+              End-to-end web apps — from responsive frontends to Node.js/Express backends with
+              real-time features and secure authentication.
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon" style="background:rgba(129,140,248,0.1); color:var(--accent2)">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="about-card-title">Graphic Design</div>
+            <div class="about-card-desc">
+              Magazine layouts, promotional materials, packaging design, and brand identity using
+              Adobe Photoshop and Canva.
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon" style="background:rgba(243,156,18,0.1); color:#f39c12">
+              <i class="fa-solid fa-chart-bar"></i>
+            </div>
+            <div class="about-card-title">Data Analytics (Power BI)</div>
+            <div class="about-card-desc">
+              Interactive dashboards and reports in Power BI — transforming raw health data into
+              actionable visual insights.
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon" style="background:rgba(244,114,182,0.1); color:var(--accent3)">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <div class="about-card-title">3D Modeling (Blender)</div>
+            <div class="about-card-desc">
+              Architectural 3D visualization in Blender 4.4 — full exterior and interior builds
+              with lighting, materials, and final renders.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       EXPERIENCE & EDUCATION
+       ═══════════════════════════════════════ -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-label">Timeline</div>
+      <h2 class="section-title fade-up">Experience &amp; Education</h2>
+      <p class="section-desc fade-up">My academic and professional journey so far.</p>
+
+      <div class="timeline fade-up">
+
+        <!-- Working Student -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-title">Working Student</div>
+            <span class="tl-date">2023 – Present</span>
+          </div>
+          <div class="tl-org">Sacred Heart College · Lucena City (Marillac Grantee)</div>
+          <p class="tl-desc">
+            Fulfills daily work duties assigned by the school while maintaining full academic
+            responsibilities. Serves in multiple departments, demonstrating reliability,
+            discipline, and strong time management.
+          </p>
+          <ul class="tl-list">
+            <li>CVF (Christian Vincentian Formation) — supports faith formation programs and activities</li>
+            <li>Garden — maintains school grounds and green spaces</li>
+            <li>AVR (Audio-Visual Room) — sets up and manages AV equipment for school events</li>
+            <li>Chapel — assists in maintaining and preparing the chapel for activities</li>
+            <li>Canteen — assists with canteen operations and service</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tl-tag">Time Management</span>
+            <span class="tl-tag">Responsibility</span>
+            <span class="tl-tag">Multi-tasking</span>
+            <span class="tl-tag">Work Ethic</span>
+          </div>
+        </div>
+
+        <!-- Full-Stack Web Development -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-title">Full-Stack Web Development</div>
+            <span class="tl-date">2024 – Present</span>
+          </div>
+          <div class="tl-org">Academic &amp; Personal Projects</div>
+          <p class="tl-desc">
+            Built responsive, interactive web applications including a live barbershop booking
+            platform with real-time slot management, admin dashboard, and secure authentication.
+          </p>
+          <div class="tl-tags">
+            <span class="tl-tag">HTML · CSS · JS</span>
+            <span class="tl-tag">Node.js</span>
+            <span class="tl-tag">Express</span>
+            <span class="tl-tag">MySQL</span>
+            <span class="tl-tag">UI/UX</span>
+          </div>
+        </div>
+
+        <!-- Computational Science / Power BI -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-title">Computational Science — Power BI Analytics</div>
+            <span class="tl-date">2024 – Present</span>
+          </div>
+          <div class="tl-org">Sacred Heart College — BS Computer Science</div>
+          <p class="tl-desc">
+            Designed and built a multi-page interactive Power BI dashboard for global disease
+            analysis — covering disease burden, treatment effectiveness, and country-level
+            healthcare spending vs. mortality rate.
+          </p>
+          <div class="tl-tags">
+            <span class="tl-tag">Power BI</span>
+            <span class="tl-tag">Data Visualization</span>
+            <span class="tl-tag">DAX</span>
+            <span class="tl-tag">Computational Science</span>
+          </div>
+        </div>
+
+        <!-- Graphic Design & 3D -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-title">Graphic Design &amp; 3D Modeling</div>
+            <span class="tl-date">2023 – Present</span>
+          </div>
+          <div class="tl-org">Sacred Heart College</div>
+          <p class="tl-desc">
+            Designed multi-page magazines, promotional ads, and product packaging in Adobe
+            Photoshop. Built a complete 3D barbershop model in Blender 4.4 with detailed
+            interior and exterior scenes.
+          </p>
+          <div class="tl-tags">
+            <span class="tl-tag">Adobe Photoshop</span>
+            <span class="tl-tag">Blender 4.4</span>
+            <span class="tl-tag">Canva</span>
+            <span class="tl-tag">Brand Identity</span>
+          </div>
+        </div>
+
+        <!-- BSCS -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-title">BS Computer Science — 3rd Year</div>
+            <span class="tl-date">2023 – Present</span>
+          </div>
+          <div class="tl-org">Sacred Heart College · Lucena City</div>
+          <p class="tl-desc">
+            Pursuing a Bachelor of Science in Computer Science with coursework covering core
+            programming, systems, and engineering disciplines.
+          </p>
+          <div class="tl-tags">
+            <span class="tl-tag">Programming</span>
+            <span class="tl-tag">Algorithms</span>
+            <span class="tl-tag">Data Structures</span>
+            <span class="tl-tag">Software Engineering</span>
+            <span class="tl-tag">Web Development</span>
+          </div>
+        </div>
+
+        <!-- Senior High School -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-title">High School &amp; Senior High School Diploma — ABM Strand</div>
+            <span class="tl-date">2017 – 2023</span>
+          </div>
+          <div class="tl-org">Lagay National High School</div>
+          <p class="tl-desc">
+            Completed senior high under the Accountancy, Business &amp; Management strand —
+            building foundational skills in business concepts and digital literacy.
+          </p>
+          <div class="tl-tags">
+            <span class="tl-tag">ABM</span>
+            <span class="tl-tag">Business</span>
+            <span class="tl-tag">Digital Literacy</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS SECTION
+       ═══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title fade-up">Web &amp; Data Projects</h2>
+      <p class="section-desc fade-up">Things I've built — from full-stack web apps to data dashboards.</p>
+
+      <div class="proj-grid fade-up">
+
+        <!-- ── FEATURED: Isko Barbers (full-width, image slider) ── -->
+        <div class="proj-card featured">
+
+          <!-- Image Slider showing real website screenshots -->
+          <div class="proj-thumb">
+            <div class="proj-slider">
+              <div class="proj-slider-track" id="barbersSliderTrack">
+                <img src="images/barbers_page2.jpg" alt="Isko Barbers — Page 2" />
+                <img src="images/barbers_page3.jpg" alt="Isko Barbers — Page 3" />
+                <img src="images/barbers_page4.jpg" alt="Isko Barbers — Page 4" />
+                <img src="images/barbers_poster.jpg" alt="Isko Barbers — Poster" />
+              </div>
+              <!-- Slider Controls -->
+              <button class="slider-btn prev" id="sliderPrev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="slider-btn next" id="sliderNext">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <div class="slider-dots" id="barbersSliderDots"></div>
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="proj-body">
+            <div class="proj-live-badge">
+              <span class="dot"></span> Live Project
+            </div>
+            <div class="proj-title">Isko Barbers — Full-Stack Booking App</div>
+            <p class="proj-desc">
+              A complete barbershop booking platform with a multi-section public site, real-time
+              slot availability, double-booking prevention, and a secure admin dashboard with
+              analytics, CSV export, and session authentication.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag js">JavaScript</span>
+              <span class="proj-tag node">Node.js</span>
+              <span class="proj-tag default">Express</span>
+              <span class="proj-tag default">SQLite3</span>
+              <span class="proj-tag default">Bcrypt.js</span>
+              <span class="proj-tag default">Nodemailer</span>
+              <span class="proj-tag default">UI/UX</span>
+            </div>
+            <div class="proj-links">
+              <a class="proj-link primary" href="https://isko-barbers.onrender.com/" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live
+              </a>
+              <a class="proj-link" href="https://github.com/marcdextervargas2" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- ── Power BI — Global Disease Dashboard ── -->
+        <div class="proj-card featured">
+
+          <!-- Dashboard Preview Grid (shows all 3 pages) -->
+          <div class="proj-thumb">
+            <div class="powerbi-thumb-grid">
+              <img src="images/powerbi_page1.png" alt="Global Disease Overview — Power BI Page 1" />
+              <img src="images/powerbi_page2.png" alt="Treatment & Prevention — Power BI Page 2" />
+              <img src="images/powerbi_page3.png" alt="Disease Burden by Country — Power BI Page 3" />
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="proj-body">
+            <div class="proj-live-badge" style="color:#f39c12; background:rgba(243,156,18,0.1); border-color:rgba(243,156,18,0.25);">
+              <span class="dot" style="background:#f39c12; animation:pulse 2s infinite"></span>
+              Computational Science
+            </div>
+            <div class="proj-title">Global Disease Dashboard — Power BI</div>
+            <p class="proj-desc">
+              A 3-page interactive Power BI report analyzing global disease data across 10 countries.
+              Covers disease category breakdown, monthly trends, treatment effectiveness, prevention
+              methods, and healthcare spending vs. mortality rates. Built with DAX measures,
+              custom visuals, cross-page filtering, and dynamic KPIs.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag powerbi">Power BI</span>
+              <span class="proj-tag default">DAX</span>
+              <span class="proj-tag default">Data Modeling</span>
+              <span class="proj-tag default">Data Viz</span>
+              <span class="proj-tag default">Computational Science</span>
+            </div>
+            <div class="proj-links">
+              <a class="proj-link primary"
+                 onclick="openModal('images/powerbi_page1.png','Global Disease Overview','Page 1 of 3 — KPI cards (18M total cases, 300K deaths), Disease Category Breakdown, Monthly Trend 2023, Top Diseases by Cases, Disease Burden by Region, Prevention Method Effectiveness, and Medicines Reference Table.')">
+                <i class="fa-solid fa-magnifying-glass-chart"></i> Page 1 — Overview
+              </a>
+              <a class="proj-link"
+                 onclick="openModal('images/powerbi_page2.png','Treatment & Prevention','Page 2 of 3 — Drug Effectiveness vs 80% Benchmark, Prescription vs OTC Medicines, Disease-to-Prevention Flow (Sankey), Prevention Effectiveness by Type (Radar), and Cost vs Effectiveness Scatter.')">
+                <i class="fa-solid fa-stethoscope"></i> Page 2 — Treatment
+              </a>
+              <a class="proj-link"
+                 onclick="openModal('images/powerbi_page3.png','Total Disease Burden by Country','Page 3 of 3 — Total Cases by Country, Avg Recovery Rate (88.48%), Avg Mortality Rate (11.52%), Healthcare Spending vs Mortality Scatter, and Disease Burden Treemap.')">
+                <i class="fa-solid fa-earth-asia"></i> Page 3 — Countries
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       DESIGN WORKS & 3D
+       ═══════════════════════════════════════ -->
+  <section id="design">
+    <div class="wrap">
+      <div class="section-label">Creative Work</div>
+      <h2 class="section-title fade-up">Graphic Design &amp; 3D</h2>
+      <p class="section-desc fade-up">
+        Visual work spanning print design, branding, packaging, and 3D architectural modeling.
+      </p>
+
+      <!-- Magazine / Print Design -->
+      <div class="sub-section-label fade-up">Isko Barbers — Magazine &amp; Print Design</div>
+      <div class="design-grid fade-up" style="margin-bottom: 44px">
+
+        <div class="design-card"
+             onclick="openModal('images/barbers_poster.jpg',
+                               'Isko Barbers — Magazine Cover & Poster',
+                               'Full-spread magazine cover and promotional poster for Isko Barbers. Designed in Adobe Photoshop with bold typography, geometric layouts, and a brand-consistent color palette.')">
+          <div class="design-thumb">
+            <img src="images/barbers_poster.jpg" alt="Magazine Cover" />
+          </div>
+          <div class="design-info">
+            <div class="design-title">Cover &amp; Promotional Poster</div>
+            <div class="design-sub">Adobe Photoshop · Magazine Layout</div>
+          </div>
+        </div>
+
+        <div class="design-card"
+             onclick="openModal('images/barbers_page2.jpg',
+                               'Isko Barbers — Logo & Freebies Spread',
+                               'Inside spread featuring the Logo Identity and Freebies & Promos page. Designed with a dark gray and gold theme.')">
+          <div class="design-thumb">
+            <img src="images/barbers_page2.jpg" alt="Magazine Page 2" />
+          </div>
+          <div class="design-info">
+            <div class="design-title">Logo &amp; Freebies Spread</div>
+            <div class="design-sub">Adobe Photoshop · Brand Identity</div>
+          </div>
+        </div>
+
+        <div class="design-card"
+             onclick="openModal('images/barbers_page3.jpg',
+                               'Isko Barbers — Services & History',
+                               'Services page listing Classic Haircuts, Fade & Taper, Beard Trim, and Barbershop History spread.')">
+          <div class="design-thumb">
+            <img src="images/barbers_page3.jpg" alt="Magazine Page 3" />
+          </div>
+          <div class="design-info">
+            <div class="design-title">Services &amp; History Page</div>
+            <div class="design-sub">Adobe Photoshop · Editorial Design</div>
+          </div>
+        </div>
+
+        <div class="design-card"
+             onclick="openModal('images/barbers_page4.jpg',
+                               'Isko Barbers — Haircut Showcase',
+                               'Full double-page spread showcasing Modern Cuts for Men and Cool Cuts for Kids.')">
+          <div class="design-thumb">
+            <img src="images/barbers_page4.jpg" alt="Magazine Page 4" />
+          </div>
+          <div class="design-info">
+            <div class="design-title">Haircut Showcase Spread</div>
+            <div class="design-sub">Adobe Photoshop · Layout Design</div>
+          </div>
+        </div>
+
+        <div class="design-card"
+             onclick="openModal('images/activity8_photoshop.jpg',
+                               'Isko Barbers — Promotional Advertisement',
+                               'Full-page promotional advertisement featuring bold black and gold typography, service checklist, and phone mockup.')">
+          <div class="design-thumb">
+            <img src="images/activity8_photoshop.jpg" alt="Promotional Ad" />
+          </div>
+          <div class="design-info">
+            <div class="design-title">Promotional Advertisement</div>
+            <div class="design-sub">Adobe Photoshop · Advertising Design</div>
+          </div>
+        </div>
+
+        <div class="design-card"
+             onclick="openModal('images/box_packaging.jpg',
+                               'Isko Barbers — Packaging Box Design',
+                               '3D product box packaging using a die-cut template. Bold yellow and black palette wrapping all box faces.')">
+          <div class="design-thumb">
+            <img src="images/box_packaging.jpg" alt="Box Packaging" />
+          </div>
+          <div class="design-info">
+            <div class="design-title">Product Box Packaging</div>
+            <div class="design-sub">Adobe Photoshop · 3D Box Template</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Blender 3D -->
+      <div class="sub-section-label fade-up">Isko Barbers — 3D Architectural Model (Blender 4.4)</div>
+      <div class="blender-grid fade-up">
+
+        <div class="blender-cell"
+             onclick="openModal('images/blender_render1.png',
+                               'Blender — Exterior Render View 1',
+                               'Rendered exterior of the Isko Barbers 3D model built in Blender 4.4. Features barber pole, glass storefront, AC units, and parking area.')">
+          <img src="images/blender_render1.png" alt="Blender Render 1" class="tall" style="height:260px" />
+          <div class="blender-overlay">Exterior Render — View 1</div>
+        </div>
+
+        <div class="blender-cell"
+             onclick="openModal('images/blender_render2.png',
+                               'Blender — Exterior Render View 2',
+                               'Second angle showing front facade, dual barber poles, display windows, signage, and parking lot.')">
+          <img src="images/blender_render2.png" alt="Blender Render 2" style="height:260px" />
+          <div class="blender-overlay">Exterior Render — View 2</div>
+        </div>
+
+        <div class="blender-cell"
+             onclick="openModal('images/blender_editor1.png',
+                               'Blender Editor — Scene Layout',
+                               'Full scene layout with parking, trees, street lamp, interior chairs, and building shell in Blender 4.4.')">
+          <img src="images/blender_editor1.png" alt="Blender Editor 1" />
+          <div class="blender-overlay">Editor — Scene Layout</div>
+        </div>
+
+        <div class="blender-cell"
+             onclick="openModal('images/blender_editor2.png',
+                               'Blender Editor — Full Interior + Exterior Build',
+                               'Complete interior + exterior build in Blender 4.4. Barber chairs, waiting area, reception, and parking.')">
+          <img src="images/blender_editor2.png" alt="Blender Editor 2" />
+          <div class="blender-overlay">Full Interior + Exterior Build</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       CERTIFICATIONS
+       ═══════════════════════════════════════ -->
+  <section id="certifications">
+    <div class="wrap">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title fade-up">Certifications</h2>
+
+      <div class="certs-grid fade-up">
+
+        <div class="cert-card"
+             onclick="openModal('images/gemini_certi.jpeg',
+                               'Gemini Certified Student — Google for Education',
+                               'Awarded by Google for Education for demonstrating knowledge and skills in using Google AI. Issued: August 11, 2025 · Valid through August 11, 2028.')">
+          <div class="cert-thumb">
+            <img src="images/gemini_certi.jpeg" alt="Gemini Certificate" />
+          </div>
+          <div>
+            <div class="cert-name">Gemini Certified Student</div>
+            <div class="cert-issuer">Google for Education</div>
+            <div style="font-size:0.68rem; color:var(--muted); margin-bottom:6px;">
+              Issued Aug 2025 · Valid thru Aug 2028
+            </div>
+            <div class="cert-valid">
+              <i class="fa-solid fa-circle-check"></i> Active &amp; Valid
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card"
+             onclick="openModal('images/Vargas-certificate_Minecraft_Hour_of_Code.jpg',
+                               'Hour of Code — Code.org × Minecraft',
+                               'Awarded by Code.org and Mojang for completion of the Hour of Code activity using Minecraft, demonstrating foundational Computer Science concepts.')">
+          <div class="cert-thumb">
+            <img src="images/Vargas-certificate_Minecraft_Hour_of_Code.jpg" alt="Minecraft Certificate" />
+          </div>
+          <div>
+            <div class="cert-name">Hour of Code — Minecraft</div>
+            <div class="cert-issuer">Code.org × Mojang</div>
+            <div style="font-size:0.68rem; color:var(--muted); margin-bottom:6px;">
+              Certificate of Completion
+            </div>
+            <div class="cert-valid">
+              <i class="fa-solid fa-circle-check"></i> Verified
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT SECTION
+       ═══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title fade-up">Let's work together</h2>
+      <p class="section-desc fade-up">
+        Open to OJT opportunities, collaborations, and freelance projects.
+        Fill out the form — it will open your email client!
+      </p>
+
+      <div class="contact-grid fade-up">
+
+        <!-- Left: Contact Info -->
+        <div class="contact-info">
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-val">09657043304</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-val">marcdextervargas393@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-val">Lucena City, Quezon Province</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <div class="contact-label">School</div>
+              <div class="contact-val">Sacred Heart College</div>
+            </div>
+          </div>
+
+          <!-- Social Links (Facebook removed per request) -->
+          <div>
+            <div class="contact-label" style="margin-bottom: 10px">Find me on</div>
+            <div class="social-row">
+              <a class="social-btn" href="https://github.com/marcdextervargas2"
+                 target="_blank" rel="noopener" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a class="social-btn" href="https://www.linkedin.com/in/marc-dexter-vargas/"
+                 target="_blank" rel="noopener" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a class="social-btn" href="https://www.behance.net/marcdextervargas2"
+                 target="_blank" rel="noopener" title="Behance">
+                <i class="fa-brands fa-behance"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- OJT Callout -->
+          <div class="ojt-box">
+            <div class="ojt-box-title">🎓 Open for OJT</div>
+            <div class="ojt-box-desc">
+              Actively seeking On-the-Job Training in IT, web development, graphic design,
+              or data analytics. Let's connect!
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input id="firstName" type="text" placeholder="Jane" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input id="lastName" type="text" placeholder="Doe" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="senderEmail">Email Address</label>
+            <input id="senderEmail" type="email" placeholder="jane@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" placeholder="OJT inquiry, collaboration…" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell me about your project or opportunity…"></textarea>
+          </div>
+
+          <button class="btn-send" onclick="sendMessage()">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-left">
+          © <span id="currentYear"></span>
+          <strong>Marc Dexter P. Vargas</strong> · Built with ❤️ in Lucena City, Philippines
+        </div>
+        <div class="footer-right">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="images/MARC_DEXTER_VARGAS_RESUME.pdf" download>Resume</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript (loaded last for performance) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
